@@ -3,3 +3,4 @@
 
 # 오답 원인 목록
 list = sorted(list)
+[print(value) for value in result] 리스트 컴프리헨션
