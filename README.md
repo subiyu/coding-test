@@ -27,3 +27,7 @@
     import copy
 
     arr2 = copy.deepcopy(arr)
+
+6. 2차원 배열에서 최댓값 찾기
+
+    maxVal = max(max(row) for row in graph)
