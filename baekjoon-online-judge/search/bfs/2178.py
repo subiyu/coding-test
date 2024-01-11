@@ -12,9 +12,9 @@ def bfs(maze, N, M):
             nx = x + dx[i] #+x는 오른쪽 방향
             ny = y + dy[i] #+y는 밑쪽 방향
 
-            if nx < 0 or nx >= M or ny < 0 or ny >= N or maze[ny][nx] == 0: #maze[ny][nx] == 0 이면 이미 방문한 노드로 간주
+            if nx < 0 or nx >= M or ny < 0 or ny >= N or maze[ny][nx] == 0:
                 continue
-            if maze[ny][nx] == 1:
+            if maze[ny][nx] == 1: #maze[ny][nx] > 1 이면 이미 방문한 노드로 간주
                 maze[ny][nx] = maze[y][x] + 1
                 queue.append((nx, ny))
 
