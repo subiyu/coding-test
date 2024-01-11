@@ -4,9 +4,11 @@
 # 오답 원인 목록
 1. list = sorted(list)
 
-2. [print(value) for value in result] 리스트 컴프리헨션
+2. sorted(arr, reverse=True)
 
-3. 입력값이 10221 일때 [1, 0, 2, 2, 1]로 변환하기
+3. [print(value) for value in result] 리스트 컴프리헨션
+
+4. 입력값이 10221 일때 [1, 0, 2, 2, 1]로 변환하기
 
     list(input) => ['1', '0', '2', '2', '1']
 
