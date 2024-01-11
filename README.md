@@ -8,14 +8,14 @@
 
 3. 입력값이 10221 일때 [1, 0, 2, 2, 1]로 변환하기
 
-  list(input) => ['1', '0', '2', '2', '1']
+    list(input) => ['1', '0', '2', '2', '1']
 
-  map(int, list(input()) => [1, 0, 2, 2, 1]
+    map(int, list(input()) => [1, 0, 2, 2, 1]
 
-  map은 key, value 쌍이므로 인덱싱 불가능
+    map은 key, value 쌍이므로 인덱싱 불가능
 
-  maze = map(int, list(input()) 일 때, maze[1][1] 접근 불가능
+    maze = map(int, list(input()) 일 때, maze[1][1] 접근 불가능
 
-  => 다시 list로 감싼다
+    => 다시 list로 감싼다
 
-  => list(map(int, list(input())))
+    => list(map(int, list(input())))
