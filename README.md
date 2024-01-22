@@ -31,3 +31,7 @@
 6. 2차원 배열에서 최댓값 찾기
 
     maxVal = max(max(row) for row in graph)
+
+7. stack 비어있는지 확인
+
+   if not stack:
