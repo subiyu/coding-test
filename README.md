@@ -35,3 +35,9 @@
 7. stack 비어있는지 확인
 
    if not stack:
+
+8. 딕셔너리
+
+   dic = {}
+   
+   dic['apple'] = 1
