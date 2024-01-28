@@ -41,3 +41,7 @@
    dic = {}
    
    dic['apple'] = 1
+
+9. deque 초기화
+
+    queue = deque([(0, 0)])
