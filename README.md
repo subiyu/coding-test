@@ -44,4 +44,10 @@
 
 9. deque 초기화
 
-    queue = deque([(0, 0)])
+   queue = deque([(0, 0)])
+
+10. 해쉬(if target in arr) => 여기서 arr을 배열으로 만드는 것 보다 해쉬로 만드는게 효율성이 좋음(검색 속도 차이) 
+
+    hash_set = set()
+
+    hash_set.add(1)
