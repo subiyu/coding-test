@@ -2,6 +2,10 @@
 코딩 테스트 문제를 풀이한 코드를 업로드하는 저장소
 
 # 오답 원인 목록
+0-1. sys.stdin.readline()
+
+0-2. sys.setrecursionlimit(10**6)
+
 1. list = sorted(list)
 
 2. 내림차순 정렬 sorted(arr, reverse=True)
