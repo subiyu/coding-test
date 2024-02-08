@@ -62,7 +62,20 @@
     
     97~122: 소문자
 
-12. s = "{{2},{2,1},{2,1,3},{2,1,3,4}}" 일 때 int형 2차원 배열로 만들기
+12. Counter()
+
+    from collections import Counter
+    
+    dic = Counter(re.findall('\d+', s)
+
+13. dictionary의 value를 기준으로 오름차순 정렬하여 리스트로 반환
+
+    list(map(int, [k for k, v in sorted(dic.items(), key=lambda x: x[1], reverse=True)]))
+
+
+    s = "2 10 12 > 3 9 6"
+
+14. s = "{{2},{2,1},{2,1,3},{2,1,3,4}}" 일 때 int형 2차원 배열로 만들기
 
     s = s.split("},{") arr = []
     
@@ -70,12 +83,9 @@
     
     arr.append(list(map(int, re.findall('\d+', element))))
 
-14. Counter()
 
-    from collections import Counter
-    
-    dic = Counter(re.findall('\d+', s)
+14-2. s = "2 10 12 > 3 9 6" 일 때, [2, 10, 12], '>', [3, 9, 6] 으로 만들기
 
-15. dictionary의 value를 기준으로 오름차순 정렬하여 리스트로 반환
-
-    list(map(int, [k for k, v in sorted(dic.items(), key=lambda x: x[1], reverse=True)]))
+pattern = r"(\d+ \d+ \d+) ([><=]) (\d+ \d+ \d+)"
+      
+match = re.match(pattern, s)
