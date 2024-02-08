@@ -68,7 +68,7 @@
     
     for element in s:
     
-        arr.append(list(map(int, re.findall('\d+', element))))
+       arr.append(list(map(int, re.findall('\d+', element))))
 
 14. Counter()
 
