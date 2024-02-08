@@ -89,3 +89,7 @@
     pattern = r"(\d+ \d+ \d+) ([><=]) (\d+ \d+ \d+)"
       
     match = re.match(pattern, s)
+
+    if match:
+
+    left = list(map(int, match.group(1).split()))
