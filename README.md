@@ -67,6 +67,7 @@
     s = s.split("},{") arr = []
     
     for element in s:
+    
         arr.append(list(map(int, re.findall('\d+', element))))
 
 14. Counter()
