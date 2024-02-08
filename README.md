@@ -84,8 +84,8 @@
     arr.append(list(map(int, re.findall('\d+', element))))
 
 
-14-2. s = "2 10 12 > 3 9 6" 일 때, [2, 10, 12], '>', [3, 9, 6] 으로 만들기
+15. s = "2 10 12 > 3 9 6" 일 때, [2, 10, 12], '>', [3, 9, 6] 으로 만들기
 
-pattern = r"(\d+ \d+ \d+) ([><=]) (\d+ \d+ \d+)"
+    pattern = r"(\d+ \d+ \d+) ([><=]) (\d+ \d+ \d+)"
       
-match = re.match(pattern, s)
+    match = re.match(pattern, s)
