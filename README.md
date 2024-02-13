@@ -93,3 +93,7 @@
     if match:
 
     left = list(map(int, match.group(1).split()))
+
+16. enumerate()
+
+    queue = deque([(i,v) for i,v in enumerate(priorities)])
