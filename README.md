@@ -97,3 +97,7 @@
 16. enumerate()
 
     queue = deque([(i,v) for i,v in enumerate(priorities)])
+
+17. 삼항연산자
+
+    max_count = count if max_count < count else max_count
