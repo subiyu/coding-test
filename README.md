@@ -98,6 +98,12 @@
 
     queue = deque([(i,v) for i,v in enumerate(priorities)])
 
-17. 삼항연산자
+17. 정규표현식을 사용하여 알파벳이 아닌 문자 찾기
+    
+    non_alphabet_pattern = re.compile('[^a-zA-Z]')
+    
+    result = bool(non_alphabet_pattern.search(s))
+
+20. 삼항연산자
 
     max_count = count if max_count < count else max_count
