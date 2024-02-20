@@ -107,3 +107,9 @@
 20. 삼항연산자
 
     max_count = count if max_count < count else max_count
+
+21. 리스트 붙이기([1, 2, 3]을 123으로 출력
+    
+    arr = [1, 2, 3]
+    
+    print(''.join(map(str, arr)))
