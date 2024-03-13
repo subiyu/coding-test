@@ -4,6 +4,8 @@
 # 오답 원인 목록
 0-1. sys.stdin.readline()
 
+=> 개행문자('\n') 없애기: sys.stdin.readline().strip()
+
 0-2. sys.setrecursionlimit(10**6)
 
 1. list = sorted(list)
