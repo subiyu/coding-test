@@ -110,7 +110,21 @@
 
     max_count = count if max_count < count else max_count
 
-21. 리스트 붙이기([1, 2, 3]을 123으로 출력
+21. 우선순위 큐
+
+    import heapq
+
+    heap_list = []
+    
+    heapq.heappush(heap_list, 2)
+
+    heapq.heappop(heap_list) #최소값 삭제
+
+    heapq.heapify(arr) #리스트를 힙으로 변환
+
+    
+
+23. 리스트 붙이기([1, 2, 3]을 123으로 출력
     
     arr = [1, 2, 3]
     
