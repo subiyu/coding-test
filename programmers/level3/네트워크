@@ -1,0 +1,20 @@
+def solution(n, computers):
+    def dfs(arr, visited, start):
+        visited[start] = True
+        
+        for k in range(n):
+            neighbor = arr[start][k]
+            if neighbor == 1 and not visited[k]:
+                dfs(arr, visited, k)
+        
+        
+    count = 0
+    visited = [False] * n
+    for i in range(n):
+        for j in range(n):
+            if computers[i][j] == 1 and not visited[i]:
+                count += 1
+                dfs(computers, visited, i)
+                
+
+    return count
