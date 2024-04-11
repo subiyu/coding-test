@@ -1,0 +1,16 @@
+def solution(genres, plays):
+    answer = []
+    dic = {}
+
+    for i, (g, p) in enumerate(zip(genres, plays)):
+        if g not in dic:
+            dic[g] = []
+        dic[g].append((i, p))
+
+    sorted_items = sorted(dic.items(), key=lambda item: sum(play for _, play in item[1]), reverse=True)
+
+    for genre, songs in sorted_items:
+        sorted_songs = sorted(songs, key=lambda x: (-x[1], x[0]))
+        answer.extend(idx for idx, _ in sorted_songs[:2])
+
+    return answer
