@@ -1,0 +1,31 @@
+import heapq
+
+
+def solution(operations):
+    answer = []
+    min_heap = []
+    max_heap = []
+
+    for oper in operations:
+        com, num = oper.split(" ")
+        if com == 'I':
+            heapq.heappush(min_heap, int(num))
+            heapq.heappush(max_heap, -int(num))
+        elif com == 'D':
+            if not min_heap:
+                continue
+            if num == '1':
+                max_val = -heapq.heappop(max_heap)
+                min_heap.remove(max_val)
+            elif num == '-1':
+                min_val = heapq.heappop(min_heap)
+                max_heap.remove(-min_val)
+                
+    if not min_heap:
+        answer = [0, 0]
+    else:
+        answer.append(-heapq.heappop(max_heap))
+        answer.append(heapq.heappop(min_heap))
+
+
+    return answer
