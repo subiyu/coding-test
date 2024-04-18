@@ -123,9 +123,16 @@
     heapq.heapify(arr) #리스트를 힙으로 변환
 
     
-
 23. 리스트 붙이기([1, 2, 3]을 123으로 출력
     
     arr = [1, 2, 3]
     
     print(''.join(map(str, arr)))
+
+24. set.add(set()) => 불가능
+
+    set.add(frozenset(set()))
+
+25. bfs에서 new_nodes 만들기 (그냥 nodes.add(neighbor) 하면 nodes가 다음 인접 neighbor에도 영향)
+
+    new_nodes = nodes | {neighbor} =>  nodes에 새로운 요소 neighbor를 추가한 새로운 집합을 생성
