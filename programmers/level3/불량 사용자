@@ -1,0 +1,40 @@
+from collections import deque
+import copy
+
+def solution(user_id, banned_id):
+    answer = 0
+    arr = []
+
+    def bfs(arr, max_depth):
+        result = set()
+        queue = deque([(set(), 0)])
+
+        while queue:
+            nodes, depth = queue.popleft()
+            if depth == max_depth:
+                result.add(frozenset(nodes))
+                continue
+            for neighbor in arr[depth]:
+                if neighbor not in nodes:
+                    new_nodes = nodes | {neighbor}
+                    queue.append((new_nodes, depth + 1))
+
+        return len(result)
+
+    for b in banned_id:
+        n = len(b)
+        tmp = []
+
+        for id in user_id:
+            if len(id) == n:
+                for i in range(n):
+                    if b[i] == '*':
+                        continue
+                    elif b[i] != id[i]:
+                        break
+                else:
+                    tmp.append(id)
+        arr.append(tmp)
+
+    answer = bfs(arr, len(banned_id))
+    return answer
